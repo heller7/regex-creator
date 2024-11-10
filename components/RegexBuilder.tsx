@@ -235,10 +235,7 @@ export const RegexBuilder = () => {
     caseInsensitive: false,
     multiline: false,
   });
-  const [savedPatterns, setSavedPatterns] = useState<Array<{name: string, pattern: string}>>(() => {
-    const saved = localStorage.getItem('savedPatterns');
-    return saved ? JSON.parse(saved) : [];
-  });
+  const [savedPatterns, setSavedPatterns] = useState<Array<{name: string, pattern: string}>>([]);
   const [patternName, setPatternName] = useState('');
   const { language } = useLanguage();
   const [wizardActive, setWizardActive] = useState(false);
@@ -247,6 +244,24 @@ export const RegexBuilder = () => {
     valid: boolean;
     message: string;
   }>({ valid: true, message: '' });
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('savedPatterns');
+      if (saved) {
+        setSavedPatterns(JSON.parse(saved));
+      }
+    }
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mounted && typeof window !== 'undefined') {
+      localStorage.setItem('savedPatterns', JSON.stringify(savedPatterns));
+    }
+  }, [savedPatterns, mounted]);
 
   const commonPatternCategories = [
     {
