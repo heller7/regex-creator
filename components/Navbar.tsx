@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "../../components/ui/button";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { Button } from "./ui/button";
+import { useLanguage } from "contexts/LanguageContext";
 
 const labels = {
   en: {

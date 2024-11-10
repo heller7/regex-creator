@@ -1,12 +1,14 @@
-import { RegexBuilder } from "../src/components/RegexBuilder";
+import { RegexBuilder } from "../components/RegexBuilder";
 
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
-      <div className="container mx-auto py-4">
-        <RegexBuilder />
-      </div>
-    </main>
+    <div className="min-h-screen flex flex-col bg-background">
+      <main className="flex-grow">
+        <div className="container mx-auto py-4 mb-auto">
+          <RegexBuilder />
+        </div>
+      </main>
+    </div>
   );
 }
