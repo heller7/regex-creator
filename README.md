@@ -17,3 +17,16 @@ A modern, interactive regular expression builder and tester built with React and
 - npm or yarn
 
 ### Installation
+bash
+git clone [your-repo-url]
+:
+bash
+npm install
+or
+yarn install
+:
+bash
+npm run dev
+or
+yarn dev
+
