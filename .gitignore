@@ -22,7 +22,19 @@
 
 # misc
 .DS_Store
+Thumbs.db
 *.pem
+
+# IDE/editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
+CLAUDE.md
 
 # debug
 npm-debug.log*
@@ -38,3 +50,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# docs
+/docs
