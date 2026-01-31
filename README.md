@@ -9,7 +9,6 @@ A modern, interactive regular expression builder and tester built with React and
 - Visual feedback for matches
 - Clean, modern interface
   
-
 ## Getting Started
 
 ### Prerequisites
