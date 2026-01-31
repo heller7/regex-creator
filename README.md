@@ -8,6 +8,7 @@ A modern, interactive regular expression builder and tester built with React and
 - Support for common regex flags (global, case-insensitive, multiline)
 - Visual feedback for matches
 - Clean, modern interface
+  
 
 ## Getting Started
 
